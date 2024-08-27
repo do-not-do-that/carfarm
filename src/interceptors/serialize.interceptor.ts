@@ -24,7 +24,7 @@ export class SerializeInterceptor implements NestInterceptor {
   ): Observable<any> {
     return next.handle().pipe(
       map((data: any) => {
-        return plainToClass(UserDto, data, { excludeExtraneousValues: true });
+        return plainToClass(this.dto, data, { excludeExtraneousValues: true });
       }),
     );
   }
