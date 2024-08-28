@@ -20,7 +20,7 @@ export class ReportsService {
   }: GetEstimateDto) {
     return this.repo
       .createQueryBuilder()
-      .select('AVG(prive)', 'price')
+      .select('AVG(price)', 'price')
       .where('make = :make', { make })
       .andWhere('model = :model', { model })
       .andWhere('lng - :lng BETWEEN -5 AND 5', { lng })
