@@ -36,6 +36,7 @@ lerna-debug.log*
 
 # db
 *.sqlite
+migrations/
 
 # env
 .env.*
