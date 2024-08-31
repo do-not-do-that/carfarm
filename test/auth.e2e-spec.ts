@@ -16,12 +16,12 @@ describe('Authentication System', () => {
   });
 
   it('handles a signup request', () => {
-    const email = 'test789@test.com';
+    const email = 'test777@test.com';
     return request(app.getHttpServer())
       .post('/auth/signup')
       .send({
         email,
-        password: 'jklejklfdjlsd',
+        password: 'test',
       })
       .expect(201)
       .then((res) => {
@@ -32,7 +32,7 @@ describe('Authentication System', () => {
   });
 
   it('signup as a new user then get the currently logged in user', async () => {
-    const email = 'test@test.com';
+    const email = 'test777@test.com';
 
     const res = await request(app.getHttpServer())
       .post('/auth/signup')
